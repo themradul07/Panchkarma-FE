@@ -10,12 +10,15 @@ const Navbar = () => {
 
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
-      <img
+      {/* <img
         onClick={() => Navigate("/")}
         className="w-44 cursor-pointer"
         src={assets.logo}
         alt=""
-      />
+      /> */}
+      <a href="/" className="text-2xl font-bold text-primary">
+      TherapyScheduler
+      </a>
       <ul className="hidden md:flex items-start gap-5 font-medium">
         <NavLink to="/">
           <li className="py-1">HOME</li>
@@ -96,7 +99,7 @@ const Navbar = () => {
           </div>
           <ul className="flex flex-col items-center gap-2 mt-5 px-5 text-lg font-medium">
             <NavLink onClick={() => setshowMenu(false)} to="/doctors">
-              <p className="px-4 py-2 rounded  inline-block">ALL DOCTORS</p>
+              <p className="px-4 py-2 rounded  inline-block">ALL THERAPISTS</p>
             </NavLink>
             <NavLink onClick={() => setshowMenu(false)} to="/about">
               <p className="px-4 py-2 rounded  inline-block">ABOUT</p>
